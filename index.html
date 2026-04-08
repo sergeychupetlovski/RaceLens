@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaceLens - Athlete Film Swap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-blue-700 text-white p-4 shadow-lg">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold italic tracking-tighter">RACELENS</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-blue-200">Find a Race</a>
+                <a href="#" class="hover:text-blue-200">My Matches</a>
+                <button class="bg-white text-blue-700 px-4 py-1 rounded-lg font-bold">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="py-16 px-4 text-center bg-white border-b">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900">Don't race in the shadows.</h2>
+        <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">The community platform for solo triathletes to swap filming duties. I film your swim exit, you film my finish line.</p>
+        <button class="mt-8 bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-blue-700 transition shadow-lg">Find Your Next Event</button>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6 grid md:grid-cols-3 gap-8">
+        
+        <!-- Registration Form -->
+        <div class="md:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="font-bold text-xl mb-4 flex items-center">
+                <i data-lucide="calendar" class="mr-2 text-blue-600"></i> Join a Race
+            </h3>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700">Select Event</label>
+                    <select class="w-full mt-1 border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                        <option>Ironman Hamburg 2024</option>
+                        <option>Challenge Roth 2024</option>
+                        <option>London Triathlon 2024</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700">Your Start Time</label>
+                    <input type="time" class="w-full mt-1 border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700">What do you need filmed?</label>
+                    <textarea placeholder="e.g. T1 Transition and the first 1km of the run" class="w-full mt-1 border border-gray-300 p-3 rounded-lg h-24 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition">List My Race</button>
+            </div>
+        </div>
+
+        <!-- Feed -->
+        <div class="md:col-span-2">
+            <h3 class="font-bold text-xl mb-4">Available Swaps in Hamburg</h3>
+            
+            <!-- Athlete Card -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 mb-4 flex justify-between items-center hover:border-blue-300 transition cursor-pointer">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-gray-900">Marc K.</h4>
+                        <p class="text-sm text-gray-500 italic">"Need 20s of the finish line!"</p>
+                        <div class="flex gap-2 mt-1">
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-bold">5 Swaps Done</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full font-bold">Start: 07:40</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-bold hover:bg-blue-100 transition text-sm">Offer to Film</button>
+            </div>
+
+            <!-- Athlete Card 2 -->
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 mb-4 flex justify-between items-center hover:border-blue-300 transition cursor-pointer">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-gray-900">Sarah J.</h4>
+                        <p class="text-sm text-gray-500 italic">"Looking for someone at Swim Exit."</p>
+                        <div class="flex gap-2 mt-1">
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-bold">2 Swaps Done</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full font-bold">Start: 06:15</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-bold hover:bg-blue-100 transition text-sm">Offer to Film</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-20 bg-gray-900 text-gray-400 py-12 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-white font-bold mb-4 italic tracking-tighter text-xl">RACELENS</h4>
+                <p class="text-sm text-gray-500">Connecting athletes to capture their best moments. Created by the community, for the community.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Platform</h4>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:text-white">Search Events</a></li>
+                    <li><a href="#" class="hover:text-white">How it Works</a></li>
+                    <li><a href="#" class="hover:text-white">Trust & Safety</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Legal</h4>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:text-white">Imprint</a></li>
+                    <li><a href="#" class="hover:text-white">Conditions of Use</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-gray-800 text-xs">
+            © 2024 RaceLens. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
